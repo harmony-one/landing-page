@@ -1,0 +1,80 @@
+@import '@assets/scss-libs/variables';
+@import '@assets/scss-libs/mixins';
+
+$margin_between_icons: 30px;
+
+.social {
+  background: rgba(20, 20, 33, 0.14);
+  // background: red;
+  background-blend-mode: multiply;
+  border-radius: 16px;
+  padding: 30px 13px 30px 12px;
+
+  display: flex;
+  flex-direction: column;
+
+  a {
+    @include _no_select();
+    @include _link();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: $margin_between_icons 0 0 0;
+
+    &:nth-child(1) {
+      margin: 0 !important;
+    }
+
+    svg {
+      width: 40px;
+
+      path {
+        fill: $textColor;
+      }
+    }
+
+    @mixin icon_hover($color) {
+      &:hover {
+        svg path {
+          fill: $color;
+        }
+      }
+    }
+
+    &:nth-child(1) { @include icon_hover(#0088CC) }
+    &:nth-child(2) { @include icon_hover(#00AB6B) }
+    &:nth-child(3) { @include icon_hover(#1DA1F2) }
+    &:nth-child(4) { @include icon_hover(#00A0DC) }
+    &:nth-child(5) { @include icon_hover(#F38831) }
+    &:nth-child(6) { @include icon_hover(#E33535) }
+  }
+
+  @mixin portrait {
+    flex-direction: row;
+    padding: 14px 25px 14px 25px;
+
+    a {
+      margin: 0 0 0 $margin_between_icons;
+    }
+  }
+
+  @include tablet {
+    @include portrait();
+  }
+
+  @include mobile {
+    flex-direction: row;
+    padding: 10px 20px 10px 20px;
+
+    a {
+      margin: 0 0 0 20px;
+    }
+
+    @media (max-width: 360px) {
+      a {
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+}

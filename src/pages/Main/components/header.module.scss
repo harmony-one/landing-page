@@ -1,0 +1,76 @@
+@import '@assets/scss-libs/variables';
+@import '@assets/scss-libs/mixins';
+@import '@assets/scss-libs/animate';
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    @include scale-in-center();
+
+    @include _icon_background('@assets/images/harmony_logo.svg');
+
+    width: 170px;
+    height: 33px;
+  }
+
+  .menu {
+    @include scale-in-center();
+
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    a {
+      @include _no_select();
+      @include _link();
+
+      margin-left: 40px;
+
+      &:nth-child(1) {
+        margin-left: 0px !important;
+      }
+
+      font-family: $baseFont;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+      text-decoration: none;
+    }
+  }
+
+  @mixin partier($height) {
+    flex-basis: $height;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .menu {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  @include tablet {
+    @include partier(200px);
+  }
+
+  @include mobile {
+    @include partier(95px);
+    align-items: center;
+
+    .logo {
+      width: 120px;
+      height: 24px;
+    }
+
+    .menu a {
+      font-size: 14px;
+      margin-left: 35px;
+    }
+  }
+}
