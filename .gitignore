@@ -11,5 +11,4 @@ firebase.json
 .firebase
 
 # Build directory
-/public
 .DS_Store
