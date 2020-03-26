@@ -62,33 +62,25 @@ $tablet_point: 1024px;
   justify-content: flex-start;
   align-items: center;
 
-  padding: 80px 90px 0 90px;
+  padding: 80px 100px 0 100px;
 
   @media (min-width: #{$large_desktop + 1px}) {
-    padding: 80px 100px 0 100px;
+    padding: 80px 200px 0 200px;
   }
 
   @include tablet {
     padding: 80px 80px;
-
-    @media (max-width: 850px) {
-      padding: 80px 50px;
-    }
-
-    @media (max-width: 810px) {
-      padding: 80px 40px;
-    }
   }
 
   @include mobile {
-    padding: 65px 40px;
+    padding: 65px 42px;
 
-    @media (max-width: 385px) {
+    @media (max-width: 400px) {
       padding: 65px 30px;
     }
 
     @media (max-width: 345px) {
-      padding: 65px 10px;
+      padding: 65px 30px;
     }
   }
 
@@ -126,7 +118,7 @@ $tablet_point: 1024px;
       font-family: $baseFont;
       font-style: normal;
       font-weight: 800;
-      font-size: 55px;
+      font-size: 48px;
       line-height: 130%;
       z-index: 12;
       letter-spacing: 0.02em;
@@ -134,16 +126,24 @@ $tablet_point: 1024px;
 
       text-align: left;
 
+      @media (min-width: #{$large_desktop + 1px}) {
+        font-size: 55px;
+      }
+
       @include tablet {
         text-align: center;
-        font-size: 38px;
+        font-size: 45px;
       }
 
       @include mobile {
         text-align: center;
-        font-size: 22px;
+        font-size: 28px;
         letter-spacing: 0.03em;
         line-height: 136%;
+
+        @media (max-width: 370px) {
+          font-size: 23px;
+        }
       }
 
       @include desktop {
@@ -185,7 +185,10 @@ $tablet_point: 1024px;
       }
 
       @include mobile {
-        margin-top: 55px;
+        margin-top: 50px;
+
+        width: 130px;
+        height: 50px;
       }
 
       h3 {
@@ -198,14 +201,10 @@ $tablet_point: 1024px;
         text-transform: uppercase;
         line-height: 1;
 
-        opacity: 0.86;
-
-        @include tablet {
-          font-size: 22px;
-        }
+        // opacity: 0.86;
 
         @include mobile {
-          font-size: 14px;
+          font-size: 16px;
         }
       }
 
@@ -225,26 +224,26 @@ $tablet_point: 1024px;
     }
 
     @include mobile {
-      bottom: 20px;
+      bottom: 60px;
     }
 
     @include tablet {
-      bottom: 100px;
+      bottom: 120px;
 
       @media (max-height: 768px) {
-        bottom: 30px;
+        bottom: 60px;
       }
     }
 
     @include desktop {
-      right: 90px;
+      right: 100px;
 
       @media (min-width: #{$large_desktop + 1px}) {
-        right: 100px;
+        right: 200px;
       }
 
       top: 50%;
-      margin-top: -190px;
+      margin-top: -186px;
     }
   }
 

@@ -25,7 +25,7 @@
 
 $mobile: 768px;
 $tablet: 1024px;
-$large_desktop: 1366px;
+$large_desktop: 1440px;
 
 @mixin mobile {
   @media (max-width: #{$mobile}) {

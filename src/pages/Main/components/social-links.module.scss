@@ -7,7 +7,8 @@ $margin_between_icons: 30px;
   // background: rgba(20, 20, 33, 0.14);
   background-blend-mode: multiply;
   border-radius: 16px;
-  padding: 30px 13px 30px 12px;
+  padding: 0;
+  margin-right: -10px;
 
   display: flex;
   flex-direction: column;
@@ -51,7 +52,7 @@ $margin_between_icons: 30px;
 
   @mixin portrait {
     flex-direction: row;
-    padding: 14px 25px 14px 25px;
+    padding: 0;
 
     a {
       margin: 0 0 0 $margin_between_icons;
@@ -60,11 +61,13 @@ $margin_between_icons: 30px;
 
   @include tablet {
     @include portrait();
+    margin: 0;
   }
 
   @include mobile {
     flex-direction: row;
-    padding: 10px 20px 10px 20px;
+    padding: 0;
+    margin: 0;
 
     a {
       margin: 0 0 0 20px;

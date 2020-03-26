@@ -74,7 +74,7 @@ export class MainPage extends React.Component {
               className={cn(
                 styles.title,
                 styles.desktopOnly,
-                styles.tabletOnly
+                styles.tabletOnly,
               )}
             >
               To scale trust for billions
