@@ -201,15 +201,37 @@ $tablet_point: 1024px;
         text-transform: uppercase;
         line-height: 1;
 
-        // opacity: 0.86;
+        opacity: 0.86;
 
         @include mobile {
           font-size: 16px;
         }
       }
 
-      &:hover {
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 800px;
+        height: 800px;
+        left: -650px;
+        top: 0px;
         background: #00ADE8;
+
+        transform: rotate(45deg);
+        transition: all 0.8s;
+      }
+
+      &:hover {
+        &:before {
+          left: -350px;
+        }
+
+        h3 {
+          opacity: 1;
+        }
       }
     }
   }
