@@ -62,10 +62,10 @@ $tablet_point: 1024px;
   justify-content: flex-start;
   align-items: center;
 
-  padding: 80px 100px 0 100px;
+  padding: 80px 100px 80px 100px;
 
   @media (min-width: #{$large_desktop + 1px}) {
-    padding: 80px 200px 0 200px;
+    padding: 80px 200px 80px 200px;
   }
 
   @include tablet {
