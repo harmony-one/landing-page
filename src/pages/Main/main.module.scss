@@ -104,9 +104,18 @@ $tablet_point: 1024px;
   .stakeBlock {
     flex-grow: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
+
+    @include tablet {
+      align-items: center;
+    }
+
+    @include mobile {
+      align-items: center;
+    }
 
     h2.title {
       @include scale-in-center();
@@ -117,18 +126,21 @@ $tablet_point: 1024px;
       font-family: $baseFont;
       font-style: normal;
       font-weight: 800;
-      font-size: 45px;
+      font-size: 55px;
       line-height: 130%;
-      text-align: center;
       z-index: 12;
       letter-spacing: 0.02em;
       white-space: nowrap;
 
+      text-align: left;
+
       @include tablet {
+        text-align: center;
         font-size: 38px;
       }
 
       @include mobile {
+        text-align: center;
         font-size: 22px;
         letter-spacing: 0.03em;
         line-height: 136%;
@@ -146,6 +158,7 @@ $tablet_point: 1024px;
     .stakeNowBlock {
       @include scale-in-center();
 
+
       @include _no_select();
       cursor: pointer;
 
@@ -153,18 +166,27 @@ $tablet_point: 1024px;
       align-items: center;
       justify-content: center;
 
-      margin-top: -65px;
+      width: 214px;
+      height: 82px;
 
-      @include tablet {
-        margin-top: -50px;
-      }
-      @include mobile {
-        margin-top: -40px;
-      }
+      background: rgba(0, 173, 232, 0.1);
+      border: 1.5px solid #00ADE8;
+      box-sizing: border-box;
+      border-radius: 10px;
 
       z-index: 11;
 
       position: relative;
+
+      margin-top: 55px;
+
+      @include tablet {
+        margin-top: 55px;
+      }
+
+      @include mobile {
+        margin-top: 55px;
+      }
 
       h3 {
         z-index: 12;
@@ -187,41 +209,8 @@ $tablet_point: 1024px;
         }
       }
 
-      @mixin square($size) {
-        width: $size;
-        height: $size;
-      }
-
-      @include square(258px);
-
-      @include tablet {
-        @include square(218px);
-      }
-
-      @include mobile {
-        @include square(152px);
-      }
-
-      &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        @include square(100%);
-        border-radius: 50%;
-        background: rgba(0, 173, 232, 0.5);
-        transition: all 0.5s;
-        // transition: all 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940);
-      }
-
       &:hover {
-        &:before {
-          @include square(140%);
-          // @include slide-scale-transform()
-        }
-
-        h3 {
-          opacity: 1;
-        }
+        background: #00ADE8;
       }
     }
   }
@@ -229,7 +218,7 @@ $tablet_point: 1024px;
   .socialPosition {
     @include scale-in-center();
     position: absolute;
-    z-index: 15;
+    z-index: 21;
 
     @media (max-height: 500px) {
       display: none;

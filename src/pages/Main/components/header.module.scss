@@ -15,6 +15,33 @@
 
     width: 170px;
     height: 33px;
+
+    z-index: 21;
+
+    @include mobile {
+      width: 24px;
+      height: 24px;
+
+      @include _icon_background('@assets/images/harmony_logo_mobile.svg');
+    }
+  }
+
+  .menuButton {
+    @include _link();
+
+    display: none;
+
+    @media (max-width: $tablet) {
+      &.displayMenu {
+        display: block;
+      }
+
+      &.hideMenu {
+        display: none;
+      }
+    }
+
+    z-index: 21;
   }
 
   .menu {
@@ -32,7 +59,7 @@
       margin-left: 40px;
 
       &:nth-child(1) {
-        margin-left: 0px !important;
+        margin: 0px !important;
       }
 
       font-family: $baseFont;
@@ -42,35 +69,38 @@
       line-height: 25px;
       text-decoration: none;
     }
-  }
 
-  @mixin partier($height) {
-    flex-basis: $height;
-    flex-direction: column;
-    align-items: flex-start;
+    @include tablet {
+      display: none;
+    }
+    @include mobile {
+      display: none;
+    }
 
-    .menu {
-      width: 100%;
+    &.mobileMenu {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+
+      display: flex;
+      flex-direction: column;
       justify-content: center;
-    }
-  }
+      align-items: center;
 
-  @include tablet {
-    @include partier(200px);
-  }
+      a {
+        margin-left: 0px;
+        margin-top: 60px;
 
-  @include mobile {
-    @include partier(95px);
-    align-items: center;
+        @include mobile {
+          margin-top: 35px;
+        }
+      }
 
-    .logo {
-      width: 120px;
-      height: 24px;
-    }
-
-    .menu a {
-      font-size: 14px;
-      margin-left: 35px;
+      background: rgba(31, 18, 48, 0.9);
+      mix-blend-mode: normal;
+      z-index: 20;
     }
   }
 }

@@ -6,13 +6,21 @@ import { isMobileOnly, isTablet } from 'react-device-detect'
 import video_desktop from '../../assets/media/video_desktop.webm'
 import video_tablet from '../../assets/media/video_tablet.mp4'
 import video_mobile from '../../assets/media/video_mobile.mp4'
-import preview from '../../assets/media/preview.png'
+// import preview from '../../assets/media/preview.png'
 
 import styles from './main.module.scss'
 import Header from './components/Header'
 import SocialLinks from './components/SocialLinks'
 
 export class MainPage extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      displayMenu: false,
+    }
+  }
+
   // componentDidMount() {
   //   if (this.player) {
   //     this.player.load()
@@ -52,9 +60,16 @@ export class MainPage extends React.Component {
         <div className={styles.backgroundBlur} />
 
         <div className={styles.mainContainer}>
-          <Header className={styles.headerPosition} />
+          <Header
+            className={styles.headerPosition}
+            displayMenu={this.state.displayMenu}
+            setDisplayMenu={value => this.setState({ displayMenu: value })}
+          />
 
-          <div className={styles.stakeBlock}>
+          <div
+            className={styles.stakeBlock}
+            style={{ display: !this.state.displayMenu ? 'flex' : 'none' }}
+          >
             <h2
               className={cn(
                 styles.title,
@@ -64,7 +79,9 @@ export class MainPage extends React.Component {
             >
               To scale trust for billions
               <br />
-              and create a radically fair economy
+              and create a radically
+              <br />
+              fair economy
             </h2>
             <h2 className={cn(styles.title, styles.mobileOnly)}>
               To scale trust
