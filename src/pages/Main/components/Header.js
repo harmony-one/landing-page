@@ -7,6 +7,8 @@ export class Header extends React.Component {
   render() {
     const { displayMenu, setDisplayMenu } = this.props
 
+    const stop = evt => evt.stopPropagation()
+
     return (
       <div className={cn(styles.header, this.props.className)}>
         <div className={cn(styles.logo)} />
@@ -31,10 +33,19 @@ export class Header extends React.Component {
           <CloseIcon />
         </div>
 
-        <div className={cn(styles.menu, displayMenu ? styles.mobileMenu : '')}>
-          <a href="https://harmony.one/team">Team</a>
-          <a href="https://harmony.one/docs">Docs</a>
-          <a href="https://harmony.one/story">Story</a>
+        <div
+          className={cn(styles.menu, displayMenu ? styles.mobileMenu : '')}
+          onClick={() => setDisplayMenu(false)}
+        >
+          <a href="https://harmony.one/team" onClick={stop}>
+            Team
+          </a>
+          <a href="https://harmony.one/docs" onClick={stop}>
+            Docs
+          </a>
+          <a href="https://harmony.one/story" onClick={stop}>
+            Story
+          </a>
           {/*<a href="https://harmony.one/day-one">Day ONE</a>*/}
         </div>
       </div>
