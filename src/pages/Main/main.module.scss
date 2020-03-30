@@ -141,6 +141,10 @@ $tablet_point: 1024px;
         letter-spacing: 0.03em;
         line-height: 136%;
 
+        @media (max-width: 400px) {
+          font-size: 24px;
+        }
+
         @media (max-width: 370px) {
           font-size: 23px;
         }
