@@ -70,6 +70,10 @@ $tablet_point: 1024px;
 
   @include tablet {
     padding: 80px 80px;
+
+    @media (max-width: 890px) {
+      padding: 80px 40px;
+    }
   }
 
   @include mobile {
@@ -133,6 +137,10 @@ $tablet_point: 1024px;
       @include tablet {
         text-align: center;
         font-size: 45px;
+
+        @media (max-width: 800px) {
+          font-size: 40px;
+        }
       }
 
       @include mobile {
@@ -214,24 +222,25 @@ $tablet_point: 1024px;
 
       overflow: hidden;
 
-      &:before {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 800px;
-        height: 800px;
-        left: -650px;
-        top: 0px;
-        background: #00ADE8;
-
-        transform: rotate(45deg);
-        transition: all 0.8s;
-      }
+      //&:before {
+      //  content: '';
+      //  position: absolute;
+      //  display: block;
+      //  width: 800px;
+      //  height: 800px;
+      //  left: -650px;
+      //  top: 0px;
+      //  background: #00ADE8;
+      //
+      //  transform: rotate(45deg);
+      //  transition: all 0.8s;
+      //}
 
       &:hover {
-        &:before {
-          left: -350px;
-        }
+        //&:before {
+        //  left: -350px;
+        //}
+        background: #00ADE8;
 
         h3 {
           opacity: 1;

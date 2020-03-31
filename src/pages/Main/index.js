@@ -79,9 +79,7 @@ export class MainPage extends React.Component {
             >
               To scale trust for billions
               <br />
-              and create a radically
-              <br />
-              fair economy
+              and create a radically fair economy
             </h2>
             <h2 className={cn(styles.title, styles.mobileOnly)}>
               To scale trust

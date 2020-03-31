@@ -44,7 +44,7 @@ export class Header extends React.Component {
             Docs
           </a>
           <a href="https://harmony.one/story" onClick={stop}>
-            Story
+            Story Docs Team
           </a>
           {/*<a href="https://harmony.one/day-one">Day ONE</a>*/}
         </div>

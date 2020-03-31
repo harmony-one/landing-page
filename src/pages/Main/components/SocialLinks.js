@@ -37,7 +37,7 @@ export class SocialLinks extends React.Component {
           <TwitterIcon />
         </a>
         <a
-          href="https://www.linkedin.com/company/18655748/admin"
+          href="http://linkedin.com/company/harmony-one"
           target="_blank"
           rel="noopener noreferrer"
         >
