@@ -70,10 +70,6 @@ $tablet_point: 1024px;
 
   @include tablet {
     padding: 80px 80px;
-
-    @media (max-width: 890px) {
-      padding: 80px 40px;
-    }
   }
 
   @include mobile {
@@ -137,10 +133,6 @@ $tablet_point: 1024px;
       @include tablet {
         text-align: center;
         font-size: 45px;
-
-        @media (max-width: 800px) {
-          font-size: 40px;
-        }
       }
 
       @include mobile {

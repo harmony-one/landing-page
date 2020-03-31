@@ -37,14 +37,14 @@ export class Header extends React.Component {
           className={cn(styles.menu, displayMenu ? styles.mobileMenu : '')}
           onClick={() => setDisplayMenu(false)}
         >
-          <a href="https://harmony.one/team" onClick={stop}>
-            Team
+          <a href="https://harmony.one/story" onClick={stop}>
+            Story
           </a>
           <a href="https://harmony.one/docs" onClick={stop}>
             Docs
           </a>
-          <a href="https://harmony.one/story" onClick={stop}>
-            Story Docs Team
+          <a href="https://harmony.one/team" onClick={stop}>
+            Team
           </a>
           {/*<a href="https://harmony.one/day-one">Day ONE</a>*/}
         </div>
