@@ -43,6 +43,9 @@ export class Header extends React.Component {
           <a href="https://harmony.one/docs" onClick={stop}>
             Docs
           </a>
+          <a href="https://harmony.one/code" onClick={stop}>
+            Code
+          </a>
           <a href="https://harmony.one/team" onClick={stop}>
             Team
           </a>
