@@ -61,6 +61,7 @@ $tablet_point: 1024px;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  width:100%;
 
   padding: 80px 100px 80px 100px;
 
@@ -142,11 +143,11 @@ $tablet_point: 1024px;
         line-height: 136%;
 
         @media (max-width: 400px) {
-          font-size: 24px;
+          font-size: 20px;
         }
 
         @media (max-width: 370px) {
-          font-size: 23px;
+          font-size: 20px;
         }
       }
 
