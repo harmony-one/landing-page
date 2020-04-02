@@ -3,5 +3,14 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+const webpack = require('webpack');
 
-// You can delete this file if you're not using it
+exports.onCreateWebpackConfig = ({ stage, actions }, options) => {
+  actions.setWebpackConfig({
+    plugins: [
+      new webpack.optimize.LimitChunkCountPlugin({
+        maxChunks: 1,
+      }),
+    ],
+  })
+}
